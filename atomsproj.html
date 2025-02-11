@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protons and Their Role in Atoms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .search-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .iframe-container {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Protons and Their Role in Atoms</h1>
+        <p>Protons are one of the three fundamental subatomic particles that make up an atom, along with neutrons and electrons. They are positively charged particles found in the nucleus of an atom.</p>
+        
+        <h2>Properties of Protons</h2>
+        <p>Each proton carries a positive electric charge of +1e, which is equal in magnitude to the negative charge of an electron. Protons have a relative mass of approximately 1 atomic mass unit (amu).</p>
+        
+        <h2>The Role of Protons in Atomic Structure</h2>
+        <p>Protons determine the identity of an element. The number of protons in an atom's nucleus is called its atomic number, which defines the element. For example, hydrogen has one proton, helium has two, and carbon has six.</p>
+        
+        <h2>Protons and Chemical Properties</h2>
+        <p>Since protons define the atomic number, they also influence an element's chemical properties. The number of protons dictates how many electrons an atom has in a neutral state, which affects how it interacts with other atoms to form molecules.</p>
+        
+        <h2>Protons and Nuclear Reactions</h2>
+        <p>Protons play a crucial role in nuclear reactions. In nuclear fusion, lighter atoms like hydrogen fuse to form heavier atoms, releasing tremendous amounts of energy. In nuclear fission, splitting an atomic nucleus can release energy by breaking apart protons and neutrons.</p>
+        
+        <h2>Conclusion</h2>
+        <p>Protons are essential to atomic structure, defining elements and influencing chemical and nuclear reactions. Their charge and number play a fundamental role in how matter interacts in the universe.</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchQuery" placeholder="Type your query...">
+            <button onclick="searchProtons()">Learn More</button>
+        </div>
+    </div>
+
+    <div class="iframe-container" id="iframeContainer">
+        <h2>Learn More</h2>
+        <iframe id="infoFrame"></iframe>
+    </div>
+
+    <script>
+        function searchProtons() {
+            var query = document.getElementById('searchQuery').value;
+            if(query) {
+                var iframeContainer = document.getElementById('iframeContainer');
+                var iframe = document.getElementById('infoFrame');
+                iframe.src = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+                iframeContainer.style.display = 'block';
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
