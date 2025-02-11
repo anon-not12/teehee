@@ -92,7 +92,7 @@
             if(query) {
                 var iframeContainer = document.getElementById('iframeContainer');
                 var iframe = document.getElementById('infoFrame');
-                iframe.src = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+                iframe.src = 'https://' + encodeURIComponent(query);
                 iframeContainer.style.display = 'block';
                 window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             }
